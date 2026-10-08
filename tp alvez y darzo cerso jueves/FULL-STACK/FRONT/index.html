@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Productos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">CRUD de Productos</h1>
+        
+        <!-- Formulario para agregar/editar productos -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Agregar/Editar Producto</h5>
+                <form id="product-form">
+                    <input type="hidden" id="product-id">
+                    
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Precio</label>
+                        <input type="number" class="form-control" id="price" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Cantidad</label>
+                        <input type="number" class="form-control" id="quantity" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tabla para mostrar productos -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Lista de Productos</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-table">
+                        <!-- Aquí se agregarán los productos -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
